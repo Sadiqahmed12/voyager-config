@@ -1,0 +1,23 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/Sadiqahmed12/voyager-config
+          default-label: main
+          clone-on-start: true
+          search-paths:
+            - "*"
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+
